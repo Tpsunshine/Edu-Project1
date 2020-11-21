@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HomePage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!-- For DataTables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #071c2b;">
+            <a class="navbar-brand" href="#">Update 24x7 Admin</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">News Form 
+                          <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/editnews/getall">Edit News</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="/login/logout">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+                <div id="newstable">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">    
+                            <form action="/addnews/submit" method="GET">
+                                <h1>Add News</h1>
+                                <div class="form-group">
+                                    <label for="registeremail" class="col-md-2">Title:</label>
+                                    <input type="text" class="form-control col-md-12" name="title" id="title" placeholder="Please enter the title of news"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description" class="col-md-2">Description:</label>
+                                    <input type="text" class="form-control col-md-12" name="description" id="description" placeholder="Please enter the description of the news">
+                                </div>
+                                <div class="form-group">
+                                    <label for="imageurl" class="col-md-2">Image URL:</label>
+                                    <input type="text" class="form-control col-md-12" name="imageurl" id="imageurl" placeholder="Please enter the url of the image">
+                                </div>
+                                <div class="form-group">
+                                    <label for="publishedat" class="col-md-2">Published at:</label>
+                                    <input type="text" class="form-control col-md-12" name="publishedat" id="publishedat" placeholder="Area where the news is published"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add news</button>
+                            </form>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+
+        </div>
+</body>
+</html>
